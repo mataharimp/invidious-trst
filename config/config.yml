@@ -734,3 +734,277 @@ default_user_preferences:
   ##
   ## Note: this affects invidious-generated pages only, such
   ## as watch history and subscrip
+  ## results and channel videos depend on the data returned by
+  ## the Youtube API.
+  ##
+  ## Accepted values: any positive integer
+  ## Default: 40
+  ##
+  #max_results: 40
+
+  ##
+  ## Show/hide annotations.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #annotations: false
+
+  ##
+  ## Show/hide annotation.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #annotations_subscribed: false
+
+  ##
+  ## Type of comments to display below video.
+  ##
+  ## Accepted values: a two-entries array.
+  ## Each entry can be one of: "youtube", "reddit", ""
+  ##
+  ## Default: ["youtube", ""]
+  ##
+  #comments: ["youtube", ""]
+
+  ##
+  ## Default player style.
+  ##
+  ## Accepted values: invidious, youtube
+  ## Default: invidious
+  ##
+  #player_style: invidious
+
+  ##
+  ## Show/Hide the "related videos" sidebar when
+  ## watching a video.
+  ##
+  ## Accepted values: true, false
+  ## Default: true
+  ##
+  #related_videos: true
+
+
+  # -----------------------------
+  #  Video player behavior
+  # -----------------------------
+
+  ##
+  ## This option controls the value of the HTML5 <video> element's
+  ## "preload" attribute.
+  ##
+  ## If set to 'false', no video data will be loaded until the user
+  ## explicitly starts the video by clicking the "Play" button.
+  ## If set to 'true', the web browser will buffer some video data
+  ## while the page is loading.
+  ##
+  ## See: https://www.w3schools.com/tags/att_video_preload.asp
+  ##
+  ## Accepted values: true, false
+  ## Default: true
+  ##
+  #preload: true
+
+  ##
+  ## Automatically play videos on page load.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #autoplay: false
+
+  ##
+  ## Automatically load the "next" video (either next in
+  ## playlist or proposed) when the current video ends.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #continue: false
+
+  ##
+  ## Autoplay next video by default.
+  ##
+  ## Note: Only effective if 'continue' is set to true.
+  ##
+  ## Accepted values: true, false
+  ## Default: true
+  ##
+  #continue_autoplay: true
+
+  ##
+  ## Play videos in Audio-only mode by default.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #listen: false
+
+  ##
+  ## Loop videos automatically.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #video_loop: false
+
+
+  # -----------------------------
+  #  Video playback settings
+  # -----------------------------
+
+  ##
+  ## Default video quality.
+  ##
+  ## Accepted values: dash, hd720, medium, small
+  ## Default: dash
+  ##
+  #quality: dash
+
+  ##
+  ## Default dash video quality.
+  ##
+  ## Note: this setting only takes effet if the
+  ## 'quality' parameter is set to "dash".
+  ##
+  ## Accepted values:
+  ##    auto, best, 4320p, 2160p, 1440p, 1080p,
+  ##    720p, 480p, 360p, 240p, 144p, worst
+  ## Default: auto
+  ##
+  #quality_dash: auto
+
+  ##
+  ## Default video playback speed.
+  ##
+  ## Accepted values: 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0
+  ## Default: 1.0
+  ##
+  #speed: 1.0
+
+  ##
+  ## Default volume.
+  ##
+  ## Accepted values: 0-100
+  ## Default: 100
+  ##
+  #volume: 100
+
+  ##
+  ## Allow 360° videos to be played.
+  ##
+  ## Note: This feature requires a WebGL-enabled browser.
+  ##
+  ## Accepted values: true, false
+  ## Default: true
+  ##
+  #vr_mode: true
+
+  ##
+  ## Save the playback position
+  ## Allow to continue watching at the previous position when
+  ## watching the same video.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #save_player_pos: false
+
+  # -----------------------------
+  #  Subscription feed
+  # -----------------------------
+
+  ##
+  ## In the "Subscription" feed, only show the latest video
+  ## of each channel the user is subscribed to.
+  ##
+  ## Note: when combined with 'unseen_only', the latest unseen
+  ## video of each channel will be displayed instead of the
+  ## latest by date.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #latest_only: false
+
+  ##
+  ## Enable/Disable user subscriptions desktop notifications.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #notifications_only: false
+
+  ##
+  ## In the "Subscription" feed, Only show the videos that the
+  ## user haven't watched yet (i.e which are not in their watch
+  ## history).
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #unseen_only: false
+
+  ##
+  ## Default sorting parameter for subscription feeds.
+  ##
+  ## Accepted values:
+  ##   'alphabetically'
+  ##   'alphabetically - reverse'
+  ##   'channel name'
+  ##   'channel name - reverse'
+  ##   'published'
+  ##   'published - reverse'
+  ##
+  ## Default: published
+  ##
+  #sort: published
+
+
+  # -----------------------------
+  #  Miscellaneous
+  # -----------------------------
+
+  ##
+  ## Proxy videos through instance by default.
+  ##
+  ## Warning: As most users won't change this setting in their
+  ## preferences, defaulting  to true will significantly
+  ## increase the instance's network usage, so make sure that
+  ## your server's connection can handle it.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #local: false
+
+  ##
+  ## Show the connected user's nick at the top right.
+  ##
+  ## Accepted values: true, false
+  ## Default: true
+  ##
+  #show_nick: true
+
+  ##
+  ## Automatically redirect to a random instance when the user uses
+  ## any "switch invidious instance" link (For videos, it's the plane
+  ## icon, next to "watch on youtube" and "listen"). When set to false,
+  ## the user is sent to https://redirect.invidious.io instead, where
+  ## they can manually select an instance.
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #automatic_instance_redirect: false
+
+  ##
+  ## Show the entire video description by default (when set to 'false',
+  ## only the first few lines of the description are shown and a
+  ## "show more" button allows to expand it).
+  ##
+  ## Accepted values: true, false
+  ## Default: false
+  ##
+  #extend_desc: false
