@@ -9,9 +9,9 @@
 ## This setting is MANDATORY, unless 'database_url' is used.
 ##
 db:
-  user: kemal
-  password: kemal
-  host: localhost
+  user: baeyejun0722@gmail.com
+  password: 1234
+  host: 913d2bf1-1508-490b-9f5e-19f332f001f6
   port: 5432
   dbname: invidious
 
